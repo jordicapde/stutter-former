@@ -1,0 +1,101 @@
+epoch: 1, lr: 1.50e-04 - train loss: 7.30 - valid loss: 4.78, valid pesq: 1.17
+epoch: 2, lr: 1.50e-04 - train loss: 5.27 - valid loss: 3.73, valid pesq: 1.28
+epoch: 3, lr: 1.50e-04 - train loss: 4.56 - valid loss: 2.79, valid pesq: 1.37
+epoch: 4, lr: 1.50e-04 - train loss: 4.25 - valid loss: 3.24, valid pesq: 1.34
+epoch: 5, lr: 1.50e-04 - train loss: 4.06 - valid loss: 2.66, valid pesq: 1.40
+epoch: 6, lr: 1.50e-04 - train loss: 3.88 - valid loss: 2.57, valid pesq: 1.43
+epoch: 7, lr: 1.50e-04 - train loss: 3.89 - valid loss: 2.39, valid pesq: 1.48
+epoch: 8, lr: 1.50e-04 - train loss: 3.81 - valid loss: 2.39, valid pesq: 1.49
+epoch: 9, lr: 1.50e-04 - train loss: 3.69 - valid loss: 2.47, valid pesq: 1.51
+epoch: 10, lr: 1.50e-04 - train loss: 3.49 - valid loss: 2.60, valid pesq: 1.53
+epoch: 11, lr: 1.50e-04 - train loss: 3.41 - valid loss: 2.49, valid pesq: 1.53
+epoch: 12, lr: 1.50e-04 - train loss: 3.38 - valid loss: 2.51, valid pesq: 1.54
+epoch: 13, lr: 1.50e-04 - train loss: 3.37 - valid loss: 2.39, valid pesq: 1.54
+epoch: 14, lr: 1.50e-04 - train loss: 3.33 - valid loss: 2.06, valid pesq: 1.61
+epoch: 15, lr: 1.50e-04 - train loss: 3.24 - valid loss: 2.29, valid pesq: 1.59
+epoch: 16, lr: 1.50e-04 - train loss: 3.17 - valid loss: 1.96, valid pesq: 1.64
+epoch: 17, lr: 1.50e-04 - train loss: 3.15 - valid loss: 2.32, valid pesq: 1.59
+epoch: 18, lr: 1.50e-04 - train loss: 3.22 - valid loss: 2.24, valid pesq: 1.61
+epoch: 19, lr: 1.50e-04 - train loss: 3.10 - valid loss: 2.20, valid pesq: 1.63
+epoch: 20, lr: 1.50e-04 - train loss: 2.96 - valid loss: 2.46, valid pesq: 1.52
+epoch: 21, lr: 1.50e-04 - train loss: 3.02 - valid loss: 2.39, valid pesq: 1.54
+epoch: 22, lr: 1.50e-04 - train loss: 2.90 - valid loss: 2.25, valid pesq: 1.59
+epoch: 23, lr: 1.50e-04 - train loss: 2.84 - valid loss: 2.19, valid pesq: 1.62
+epoch: 24, lr: 1.50e-04 - train loss: 2.80 - valid loss: 2.22, valid pesq: 1.61
+epoch: 25, lr: 1.50e-04 - train loss: 2.77 - valid loss: 2.34, valid pesq: 1.58
+epoch: 26, lr: 1.50e-04 - train loss: 2.75 - valid loss: 2.19, valid pesq: 1.63
+epoch: 27, lr: 1.50e-04 - train loss: 2.72 - valid loss: 1.94, valid pesq: 1.65
+epoch: 28, lr: 1.50e-04 - train loss: 2.84 - valid loss: 1.85, valid pesq: 1.65
+epoch: 29, lr: 1.50e-04 - train loss: 2.77 - valid loss: 1.74, valid pesq: 1.67
+epoch: 30, lr: 1.50e-04 - train loss: 2.67 - valid loss: 1.70, valid pesq: 1.67
+epoch: 31, lr: 1.50e-04 - train loss: 2.60 - valid loss: 1.79, valid pesq: 1.64
+epoch: 32, lr: 1.50e-04 - train loss: 2.58 - valid loss: 1.63, valid pesq: 1.69
+epoch: 33, lr: 1.50e-04 - train loss: 2.54 - valid loss: 1.65, valid pesq: 1.72
+epoch: 34, lr: 1.50e-04 - train loss: 2.55 - valid loss: 1.77, valid pesq: 1.69
+epoch: 35, lr: 1.50e-04 - train loss: 2.45 - valid loss: 1.72, valid pesq: 1.71
+epoch: 36, lr: 1.50e-04 - train loss: 2.40 - valid loss: 1.72, valid pesq: 1.70
+epoch: 37, lr: 1.50e-04 - train loss: 2.25 - valid loss: 1.62, valid pesq: 1.71
+epoch: 38, lr: 1.50e-04 - train loss: 2.32 - valid loss: 1.78, valid pesq: 1.69
+epoch: 39, lr: 1.50e-04 - train loss: 2.29 - valid loss: 1.71, valid pesq: 1.72
+epoch: 40, lr: 1.50e-04 - train loss: 2.25 - valid loss: 2.05, valid pesq: 1.69
+epoch: 41, lr: 1.50e-04 - train loss: 2.29 - valid loss: 1.77, valid pesq: 1.75
+epoch: 42, lr: 1.50e-04 - train loss: 2.26 - valid loss: 1.75, valid pesq: 1.73
+epoch: 43, lr: 1.50e-04 - train loss: 2.10 - valid loss: 1.74, valid pesq: 1.74
+epoch: 44, lr: 1.50e-04 - train loss: 2.06 - valid loss: 1.93, valid pesq: 1.69
+epoch: 45, lr: 1.50e-04 - train loss: 2.07 - valid loss: 1.98, valid pesq: 1.72
+epoch: 46, lr: 1.50e-04 - train loss: 1.91 - valid loss: 1.82, valid pesq: 1.75
+epoch: 47, lr: 1.50e-04 - train loss: 1.99 - valid loss: 2.03, valid pesq: 1.77
+epoch: 48, lr: 1.50e-04 - train loss: 1.88 - valid loss: 2.25, valid pesq: 1.66
+epoch: 49, lr: 1.50e-04 - train loss: 1.92 - valid loss: 2.36, valid pesq: 1.63, valid stoi: 7.36e-01
+epoch: 50, lr: 1.50e-04 - train loss: 1.81 - valid loss: 1.20, valid pesq: 1.91, valid stoi: 7.52e-01
+epoch: 51, lr: 1.50e-04 - train loss: 1.50 - valid loss: 1.03, valid pesq: 1.92, valid stoi: 7.48e-01
+epoch: 52, lr: 1.50e-04 - train loss: 1.60 - valid loss: 1.75, valid pesq: 1.81, valid stoi: 7.49e-01
+epoch: 53, lr: 1.50e-04 - train loss: 1.71 - valid loss: 1.74, valid pesq: 1.86, valid stoi: 7.52e-01
+epoch: 54, lr: 1.50e-04 - train loss: 1.67 - valid loss: 1.93, valid pesq: 1.84, valid stoi: 7.50e-01
+epoch: 55, lr: 1.50e-04 - train loss: 1.51 - valid loss: 1.35, valid pesq: 1.93, valid stoi: 7.55e-01
+epoch: 56, lr: 1.50e-04 - train loss: 1.59 - valid loss: 1.67, valid pesq: 1.92, valid stoi: 7.55e-01
+epoch: 57, lr: 1.50e-04 - train loss: 1.19 - valid loss: 1.58, valid pesq: 1.84, valid stoi: 7.54e-01
+epoch: 58, lr: 1.50e-04 - train loss: 1.21 - valid loss: 2.14, valid pesq: 1.75, valid stoi: 7.43e-01
+epoch: 59, lr: 1.50e-04 - train loss: 9.31e-01 - valid loss: 1.72, valid pesq: 1.80, valid stoi: 7.39e-01
+epoch: 60, lr: 1.50e-04 - train loss: 8.64e-01 - valid loss: 2.05, valid pesq: 1.81, valid stoi: 7.42e-01
+epoch: 61, lr: 1.50e-04 - train loss: 1.05 - valid loss: 1.50, valid pesq: 1.90, valid stoi: 7.49e-01
+epoch: 62, lr: 1.50e-04 - train loss: 7.67e-01 - valid loss: 1.99, valid pesq: 1.80, valid stoi: 7.42e-01
+epoch: 63, lr: 1.50e-04 - train loss: 7.54e-01 - valid loss: 1.58, valid pesq: 1.85, valid stoi: 7.45e-01
+epoch: 64, lr: 1.50e-04 - train loss: 8.14e-01 - valid loss: 1.85, valid pesq: 1.79, valid stoi: 7.43e-01
+epoch: 65, lr: 1.50e-04 - train loss: 5.71e-01 - valid loss: 1.67, valid pesq: 1.91, valid stoi: 7.49e-01
+epoch: 66, lr: 1.50e-04 - train loss: 3.28e-01 - valid loss: 1.67, valid pesq: 1.83, valid stoi: 7.44e-01
+epoch: 67, lr: 1.50e-04 - train loss: 2.90e-01 - valid loss: 2.05, valid pesq: 1.80, valid stoi: 7.41e-01
+epoch: 68, lr: 1.50e-04 - train loss: 1.67e-01 - valid loss: 2.06, valid pesq: 1.78, valid stoi: 7.38e-01
+epoch: 69, lr: 7.50e-05 - train loss: -4.58e-01 - valid loss: 1.83, valid pesq: 1.96, valid stoi: 7.41e-01
+epoch: 70, lr: 7.50e-05 - train loss: -9.30e-01 - valid loss: 1.86, valid pesq: 1.86, valid stoi: 7.38e-01
+epoch: 71, lr: 7.50e-05 - train loss: -1.02e+00 - valid loss: 1.72, valid pesq: 1.96, valid stoi: 7.37e-01
+epoch: 72, lr: 3.75e-05 - train loss: -1.64e+00 - valid loss: 1.99, valid pesq: 1.95, valid stoi: 7.31e-01
+epoch: 73, lr: 3.75e-05 - train loss: -1.89e+00 - valid loss: 1.75, valid pesq: 1.99, valid stoi: 7.32e-01
+epoch: 74, lr: 3.75e-05 - train loss: -2.13e+00 - valid loss: 2.00, valid pesq: 1.93, valid stoi: 7.29e-01
+epoch: 75, lr: 1.87e-05 - train loss: -2.25e+00 - valid loss: 3.20, valid pesq: 1.79, valid stoi: 7.24e-01
+epoch: 76, lr: 1.87e-05 - train loss: -2.75e+00 - valid loss: 2.83, valid pesq: 1.86, valid stoi: 7.27e-01
+epoch: 77, lr: 1.87e-05 - train loss: -3.06e+00 - valid loss: 2.50, valid pesq: 1.87, valid stoi: 7.27e-01
+epoch: 78, lr: 9.37e-06 - train loss: -2.61e+00 - valid loss: 3.39, valid pesq: 1.76, valid stoi: 7.23e-01
+epoch: 79, lr: 9.37e-06 - train loss: -2.68e+00 - valid loss: 2.83, valid pesq: 1.77, valid stoi: 7.21e-01
+epoch: 80, lr: 9.37e-06 - train loss: -2.90e+00 - valid loss: 2.19, valid pesq: 1.88, valid stoi: 7.21e-01
+epoch: 81, lr: 4.69e-06 - train loss: -2.28e+00 - valid loss: 2.56, valid pesq: 1.77, valid stoi: 7.25e-01
+epoch: 82, lr: 4.69e-06 - train loss: 5.24e-01 - valid loss: 2.28, valid pesq: 1.76, valid stoi: 7.25e-01
+epoch: 83, lr: 4.69e-06 - train loss: -2.27e+00 - valid loss: 2.31, valid pesq: 1.76, valid stoi: 7.24e-01
+epoch: 84, lr: 2.34e-06 - train loss: -1.58e+00 - valid loss: 1.99, valid pesq: 1.82, valid stoi: 7.26e-01
+epoch: 85, lr: 2.34e-06 - train loss: -1.42e+00 - valid loss: 1.95, valid pesq: 1.83, valid stoi: 7.26e-01
+epoch: 86, lr: 2.34e-06 - train loss: -3.54e-02 - valid loss: 1.58, valid pesq: 1.87, valid stoi: 7.29e-01
+epoch: 87, lr: 2.34e-06 - train loss: -2.05e+00 - valid loss: 1.85, valid pesq: 1.83, valid stoi: 7.26e-01
+epoch: 88, lr: 2.34e-06 - train loss: -6.13e-02 - valid loss: 1.65, valid pesq: 1.86, valid stoi: 7.28e-01
+epoch: 89, lr: 2.34e-06 - train loss: -4.12e-01 - valid loss: 1.50, valid pesq: 1.88, valid stoi: 7.29e-01
+epoch: 90, lr: 2.34e-06 - train loss: -5.83e-01 - valid loss: 1.44, valid pesq: 1.88, valid stoi: 7.29e-01
+epoch: 91, lr: 2.34e-06 - train loss: -7.13e-01 - valid loss: 1.40, valid pesq: 1.89, valid stoi: 7.29e-01
+epoch: 92, lr: 2.34e-06 - train loss: -8.42e-01 - valid loss: 1.43, valid pesq: 1.89, valid stoi: 7.29e-01
+epoch: 93, lr: 2.34e-06 - train loss: -9.43e-01 - valid loss: 1.44, valid pesq: 1.89, valid stoi: 7.29e-01
+epoch: 94, lr: 2.34e-06 - train loss: -1.07e+00 - valid loss: 1.44, valid pesq: 1.90, valid stoi: 7.29e-01
+epoch: 95, lr: 1.17e-06 - train loss: -8.78e-01 - valid loss: 1.38, valid pesq: 1.90, valid stoi: 7.29e-01
+epoch: 96, lr: 1.17e-06 - train loss: -9.56e-01 - valid loss: 1.40, valid pesq: 1.90, valid stoi: 7.29e-01
+epoch: 97, lr: 1.17e-06 - train loss: -1.03e+00 - valid loss: 1.44, valid pesq: 1.90, valid stoi: 7.29e-01
+epoch: 98, lr: 1.17e-06 - train loss: -1.09e+00 - valid loss: 1.49, valid pesq: 1.90, valid stoi: 7.29e-01
+epoch: 99, lr: 5.86e-07 - train loss: -1.15e+00 - valid loss: 1.46, valid pesq: 1.91, valid stoi: 7.29e-01
+epoch: 100, lr: 5.86e-07 - train loss: -1.20e+00 - valid loss: 1.48, valid pesq: 1.90, valid stoi: 7.29e-01
+Epoch loaded: 73 - test loss: 3.55, test pesq: 1.93, test stoi: 6.94e-01
