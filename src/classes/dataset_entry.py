@@ -1,6 +1,5 @@
-import librosa as librosa
-
 from collections import Counter
+from pydub import AudioSegment
 
 
 class Speaker:
@@ -23,8 +22,8 @@ class Entry:
 
         print(f'File {self.file}')
         self.audio_length = 0
-        # y, sr = librosa.load(self.file_path)
-        # self.audio_length = librosa.get_duration(y=y, sr=sr)
+        audio = AudioSegment.from_file(self.file_path, 'flac')
+        self.audio_length = int(audio.duration_seconds * 1000)
 
         self.transcription = []
         self.transcription_length = 0

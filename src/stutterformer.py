@@ -1,20 +1,8 @@
-"""Recipe for training a neural speech separation system on WHAM! and WHAMR!
-datasets. The system employs an encoder, a decoder, and a masking network.
+"""
+StutterFormer model
 
-To run this recipe, do the following:
-> python train.py hparams/sepformer-wham.yaml --data_folder /your_path/wham_original
-> python train.py hparams/sepformer-whamr.yaml --data_folder /your_path/whamr
-
-The experiment file is flexible enough to support different neural
-networks. By properly changing the parameter files, you can try
-different architectures.
-
-Authors
- * Cem Subakan 2020
- * Mirco Ravanelli 2020
- * Samuele Cornell 2020
- * Mirko Bronzi 2020
- * Jianyuan Zhong 2020
+Author
+ * Jordi Capdevila Mas
 """
 
 import csv

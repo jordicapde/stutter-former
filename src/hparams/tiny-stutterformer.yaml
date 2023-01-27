@@ -1,20 +1,14 @@
 # ################################
-# Model: SepFormer for source separation
-# https://arxiv.org/abs/2010.13154
-#
-# Dataset : WHAM!
+# Model: RE-SepFormer for source separation
+# https://arxiv.org/abs/2206.09507
 # ################################
+
 # Basic parameters
 # Seed needs to be set at top of yaml, before objects with parameters are made
-#
-seed: 1312
+seed: 2345
 __set_seed: !apply:torch.manual_seed [!ref <seed>]
 
 # Data params
-
-# the data folder for the wham dataset
-# needs to end with wham_original for the wham dataset
-# respecting this convention effects the code functionality
 data_folder: ../data
 data_file: !ref <data_folder>/similarity67_1000.csv
 
@@ -23,7 +17,6 @@ output_folder: !ref ../out/<experiment_name>/<seed>
 train_log: !ref <output_folder>/train_log.txt
 save_folder: !ref <output_folder>/save
 
-# the file names should start with whamr instead of whamorg
 train_data: !ref <save_folder>/train.csv
 valid_data: !ref <save_folder>/valid.csv
 test_data: !ref <save_folder>/test.csv
@@ -36,6 +29,7 @@ num_spks: 1
 noprogressbar: False
 save_audio: False # Save estimated sources on disk
 sample_rate: 16000
+
 
 # Training parameters
 N_epochs: 100
@@ -63,7 +57,8 @@ dataloader_opts_valid:
     batch_size: !ref <batch_size>
     num_workers: 3
 
-# Specifying the network
+
+# Network parameters
 Encoder: !new:speechbrain.lobes.models.dual_path.Encoder
     kernel_size: !ref <kernel_size>
     out_channels: !ref <N_encoder_out>
@@ -127,6 +122,7 @@ modules:
     decoder: !ref <Decoder>
     masknet: !ref <MaskNet>
 
+# Other parameters
 checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
     checkpoints_dir: !ref <save_folder>
     recoverables:

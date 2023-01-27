@@ -1,21 +1,12 @@
 #!/usr/bin/env/python3
-"""Recipe for training a neural speech separation system on WHAM! and WHAMR!
-datasets. The system employs an encoder, a decoder, and a masking network.
+"""
+Script for training the StutterFormer model on LibriStutter and LibriSpeech datasets.
 
-To run this recipe, do the following:
-> python train.py hparams/sepformer-wham.yaml --data_folder /your_path/wham_original
-> python train.py hparams/sepformer-whamr.yaml --data_folder /your_path/whamr
+To run this script, do the following:
+> python train.py hparams/{hyperparams_file}.yaml
 
-The experiment file is flexible enough to support different neural
-networks. By properly changing the parameter files, you can try
-different architectures.
-
-Authors
- * Cem Subakan 2020
- * Mirco Ravanelli 2020
- * Samuele Cornell 2020
- * Mirko Bronzi 2020
- * Jianyuan Zhong 2020
+Author
+ * Jordi Capdevila Mas
 """
 
 import logging
@@ -25,7 +16,7 @@ from hyperpyyaml import load_hyperpyyaml
 from speechbrain.utils.distributed import run_on_main
 
 import speechbrain as sb
-from stutterformer2 import StutterFormer
+from stutterformer import StutterFormer
 
 
 def dataio_prep(hparams):
@@ -67,9 +58,6 @@ if __name__ == "__main__":
 
     # Load hyperparameters file with command-line overrides
     args = sys.argv[1:]
-    #XXXargs += ['hparams/tiny-stutterformer.yaml']
-    #XXXif '--device' not in args:
-        #XXXargs += ['--device', 'cpu']
     hparams_file, run_opts, overrides = sb.parse_arguments(args)
 
     with open(hparams_file) as fin:
@@ -89,9 +77,9 @@ if __name__ == "__main__":
     )
 
     # Data preparation
-    from prepare_data import prepare_librispeech_csv
+    from prepare_data import prepare_libristutter_librispeech_csv
     run_on_main(
-        prepare_librispeech_csv,
+        prepare_libristutter_librispeech_csv,
         kwargs={
             "datapath": hparams["data_folder"],
             "datafile": hparams["data_file"],
