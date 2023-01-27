@@ -1,0 +1,146 @@
+# ################################
+# Model: SepFormer for source separation
+# https://arxiv.org/abs/2010.13154
+#
+# Dataset : WHAM!
+# ################################
+# Basic parameters
+# Seed needs to be set at top of yaml, before objects with parameters are made
+#
+seed: 1312
+__set_seed: !apply:torch.manual_seed [!ref <seed>]
+
+# Data params
+
+# the data folder for the wham dataset
+# needs to end with wham_original for the wham dataset
+# respecting this convention effects the code functionality
+data_folder: ../data
+data_file: !ref <data_folder>/similarity67_1000.csv
+
+experiment_name: tiny-stutterformer
+output_folder: !ref ../out/<experiment_name>/<seed>
+train_log: !ref <output_folder>/train_log.txt
+save_folder: !ref <output_folder>/save
+
+# the file names should start with whamr instead of whamorg
+train_data: !ref <save_folder>/train.csv
+valid_data: !ref <save_folder>/valid.csv
+test_data: !ref <save_folder>/test.csv
+skip_prep: False
+
+
+# Experiment params
+test_only: False
+num_spks: 1
+noprogressbar: False
+save_audio: False # Save estimated sources on disk
+sample_rate: 16000
+
+# Training parameters
+N_epochs: 100
+batch_size: 1
+lr: 0.00015
+clip_grad_norm: 5
+loss_upper_lim: 999999  # this is the upper limit for an acceptable loss
+
+# loss thresholding -- this thresholds the training loss
+threshold_byloss: True
+threshold: -30
+
+# Encoder parameters
+N_encoder_out: 128
+out_channels: 128
+kernel_size: 16
+kernel_stride: 8
+
+# Dataloader options
+dataloader_opts:
+    batch_size: !ref <batch_size>
+    num_workers: 3
+
+dataloader_opts_valid:
+    batch_size: !ref <batch_size>
+    num_workers: 3
+
+# Specifying the network
+Encoder: !new:speechbrain.lobes.models.dual_path.Encoder
+    kernel_size: !ref <kernel_size>
+    out_channels: !ref <N_encoder_out>
+
+intra_mdl: !new:speechbrain.lobes.models.resepformer.SBTransformerBlock_wnormandskip
+    num_layers: 8
+    d_model: !ref <out_channels>
+    nhead: 8
+    d_ffn: 1024
+    dropout: 0
+    use_positional_encoding: True
+    norm_before: True
+    use_norm: True
+    use_skip: True
+
+mem_mdl: !new:speechbrain.lobes.models.resepformer.SBTransformerBlock_wnormandskip
+    num_layers: 8
+    d_model: !ref <out_channels>
+    nhead: 8
+    d_ffn: 1024
+    dropout: 0
+    use_positional_encoding: True
+    norm_before: True
+    use_norm: True
+    use_skip: True
+
+MaskNet: !new:speechbrain.lobes.models.resepformer.ResourceEfficientSeparator
+    input_dim: !ref <N_encoder_out>
+    num_spk: !ref <num_spks>
+    causal: False
+    unit: 256
+    segment_size: 150
+    layer: 2
+    mem_type: 'av'
+    seg_model: !ref <intra_mdl>
+    mem_model: !ref <mem_mdl>
+
+Decoder: !new:speechbrain.lobes.models.dual_path.Decoder
+    in_channels: !ref <N_encoder_out>
+    out_channels: 1
+    kernel_size: !ref <kernel_size>
+    stride: !ref <kernel_stride>
+    bias: False
+
+optimizer: !name:torch.optim.Adam
+    lr: !ref <lr>
+    weight_decay: 0
+
+loss: !name:speechbrain.nnet.losses.get_si_snr_with_pitwrapper
+
+lr_scheduler: !new:speechbrain.nnet.schedulers.ReduceLROnPlateau
+    factor: 0.5
+    patience: 2
+    dont_halve_until_epoch: 65
+
+epoch_counter: !new:speechbrain.utils.epoch_loop.EpochCounter
+    limit: !ref <N_epochs>
+
+modules:
+    encoder: !ref <Encoder>
+    decoder: !ref <Decoder>
+    masknet: !ref <MaskNet>
+
+checkpointer: !new:speechbrain.utils.checkpoints.Checkpointer
+    checkpoints_dir: !ref <save_folder>
+    recoverables:
+        encoder: !ref <Encoder>
+        decoder: !ref <Decoder>
+        masknet: !ref <MaskNet>
+        counter: !ref <epoch_counter>
+        lr_scheduler: !ref <lr_scheduler>
+
+train_logger: !new:speechbrain.utils.train_logger.FileTrainLogger
+    save_file: !ref <train_log>
+
+pretrainer: !new:speechbrain.utils.parameter_transfer.Pretrainer
+  loadables:
+    encoder: !ref <Encoder>
+    masknet: !ref <MaskNet>
+    decoder: !ref <Decoder>
